@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
 import ra.academy.model.Product;
+import ra.academy.validator.NameRequire;
 
 @Data
 @AllArgsConstructor
@@ -13,7 +14,7 @@ import ra.academy.model.Product;
 @NoArgsConstructor
 public
 class ProductDto {
-
+    @NameRequire
     private String name;
 
     private double price;
